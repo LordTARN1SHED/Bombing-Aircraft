@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\ASUS\source\repos\Bombing-Aircraft\Bombing-Aircraft\main.cpp(35,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  Bombing-Aircraft.vcxproj -> C:\Users\ASUS\source\repos\Bombing-Aircraft\x64\Debug\Bombing-Aircraft.exe
