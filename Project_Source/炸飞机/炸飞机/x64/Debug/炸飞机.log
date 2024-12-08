@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\ASUS\source\repos\炸飞机\炸飞机\main.cpp(35,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  炸飞机.vcxproj -> C:\Users\ASUS\source\repos\炸飞机\x64\Debug\炸飞机.exe

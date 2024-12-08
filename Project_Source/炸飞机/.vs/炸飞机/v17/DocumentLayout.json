@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\\u70B8\u98DE\u673A\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9915ADFA-4929-4F8A-A7BE-361F42EC53F3}|\u70B8\u98DE\u673A\\\u70B8\u98DE\u673A.vcxproj|C:\\Users\\ASUS\\source\\repos\\\u70B8\u98DE\u673A\\\u70B8\u98DE\u673A\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9915ADFA-4929-4F8A-A7BE-361F42EC53F3}|\u70B8\u98DE\u673A\\\u70B8\u98DE\u673A.vcxproj|solutionrelative:\u70B8\u98DE\u673A\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\\u70B8\u98DE\u673A\\\u70B8\u98DE\u673A\\main.cpp",
+              "RelativeDocumentMoniker": "\u70B8\u98DE\u673A\\main.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\\u70B8\u98DE\u673A\\\u70B8\u98DE\u673A\\main.cpp",
+              "RelativeToolTip": "\u70B8\u98DE\u673A\\main.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAwKECAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-08T08:31:46.505Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
