@@ -19,13 +19,17 @@ char map[5][11][11];
 
 int rn(int x) {
 	// 使用当前时间作为随机数种子，以确保每次运行程序时都得到不同的随机数
-	srand(time(NULL));
+	static int seed_initialized = 0;
+	if (!seed_initialized) {
+		srand((unsigned int)clock());  // 只在第一次调用时初始化种子
+		seed_initialized = 1;
+	}
 
 	// 生成伪随机数并取模得到0~x-1之间的数字
 	int randomNumber = rand() % x;
-
 	return randomNumber;
 }
+
 char rd() {
 	// 使用当前时间作为随机数种子
 	srand(time(NULL));
@@ -666,7 +670,7 @@ int figure(int* px, int* py) {
 	else if (lastround == 1) {//上一轮击伤，小范围选点
 		*px = rn(5) + lastx - 2;
 		*py = rn(5) + lasty - 2;
-		while (map[1][*px + 1][*py + 1] != ' ' || grid1[*px][*py] == -1) {
+		while (map[1][*px + 1][*py + 1] != ' ' || grid1[*px][*py] == -1 || *py > 9|| *py < 0|| *px > 9|| *px < 0) {
 			//printf("输入越界！请玩家2重新输入攻击坐标“x y”\n");
 			//scanf("%d%d", &x, &y);
 			*px = rn(5) + lastx - 2;
@@ -971,6 +975,13 @@ int main() {
 				kx[0][0] = x;
 				ky[0][0] = y;
 				kz[0][0] = z;
+
+				for (int i = 0; i < 10; i++) {
+					for (int j = 0; j < 10; j++) {
+						grid1[i][j] = grid[i][j];
+					}
+				}
+				initmap3();
 				printf("输入合法，请继续\n");
 			}
 		}
@@ -988,6 +999,13 @@ int main() {
 				kx[0][1] = x;
 				ky[0][1] = y;
 				kz[0][1] = z;
+
+				for (int i = 0; i < 10; i++) {
+					for (int j = 0; j < 10; j++) {
+						grid1[i][j] = grid[i][j];
+					}
+				}
+				initmap3();
 				printf("输入合法，请继续\n");
 			}
 		}
@@ -1005,17 +1023,19 @@ int main() {
 				kx[0][2] = x;
 				ky[0][2] = y;
 				kz[0][2] = z;
+
+				for (int i = 0; i < 10; i++) {
+					for (int j = 0; j < 10; j++) {
+						grid1[i][j] = grid[i][j];
+						grid[i][j] = 0;
+					}
+				}
+				initmap3();
 				printf("输入合法，请继续\n");
 			}
 		}
 
-		for (int i = 0; i < 10; i++) {
-			for (int j = 0; j < 10; j++) {
-				grid1[i][j] = grid[i][j];
-				grid[i][j] = 0;
-			}
-		}
-		initmap3();
+
 
 		while (getchar() != '1') { printf("请输入1确认\n"); }
 		printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
@@ -1036,6 +1056,13 @@ int main() {
 				kx[1][0] = x;
 				ky[1][0] = y;
 				kz[1][0] = z;
+
+				for (int i = 0; i < 10; i++) {
+					for (int j = 0; j < 10; j++) {
+						grid2[i][j] = grid[i][j];
+					}
+				}
+				initmap4();
 				printf("输入合法，请继续\n");
 			}
 		}
@@ -1053,6 +1080,13 @@ int main() {
 				kx[1][1] = x;
 				ky[1][1] = y;
 				kz[1][1] = z;
+
+				for (int i = 0; i < 10; i++) {
+					for (int j = 0; j < 10; j++) {
+						grid2[i][j] = grid[i][j];
+					}
+				}
+				initmap4();
 				printf("输入合法，请继续\n");
 			}
 		}
@@ -1070,19 +1104,19 @@ int main() {
 				kx[1][2] = x;
 				ky[1][2] = y;
 				kz[1][2] = z;
+
+				for (int i = 0; i < 10; i++) {
+					for (int j = 0; j < 10; j++) {
+						grid2[i][j] = grid[i][j];
+						grid[i][j] = 0;
+					}
+				}
+				initmap4();
 				printf("输入合法，请继续\n");
 			}
 		}
 
 
-		for (int i = 0; i < 10; i++) {
-			for (int j = 0; j < 10; j++) {
-				grid2[i][j] = grid[i][j];
-				grid[i][j] = 0;
-			}
-		}
-
-		initmap4();
 		while (getchar() != '2') { printf("请输入2确认\n"); }
 		printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n游戏开始\n");
 
@@ -1115,6 +1149,13 @@ int main() {
 				kx[0][0] = x;
 				ky[0][0] = y;
 				kz[0][0] = z;
+
+				for (int i = 0; i < 10; i++) {
+					for (int j = 0; j < 10; j++) {
+						grid1[i][j] = grid[i][j];
+					}
+				}
+				initmap3();
 				printf("输入合法，请继续\n");
 			}
 		}
@@ -1132,6 +1173,13 @@ int main() {
 				kx[0][1] = x;
 				ky[0][1] = y;
 				kz[0][1] = z;
+
+				for (int i = 0; i < 10; i++) {
+					for (int j = 0; j < 10; j++) {
+						grid1[i][j] = grid[i][j];
+					}
+				}
+				initmap3();
 				printf("输入合法，请继续\n");
 			}
 		}
@@ -1149,17 +1197,17 @@ int main() {
 				kx[0][2] = x;
 				ky[0][2] = y;
 				kz[0][2] = z;
+
+				for (int i = 0; i < 10; i++) {
+					for (int j = 0; j < 10; j++) {
+						grid1[i][j] = grid[i][j];
+						grid[i][j] = 0;
+					}
+				}
+				initmap3();
 				printf("输入合法，请继续\n");
 			}
 		}
-
-		for (int i = 0; i < 10; i++) {
-			for (int j = 0; j < 10; j++) {
-				grid1[i][j] = grid[i][j];
-				grid[i][j] = 0;
-			}
-		}
-		initmap3();
 
 		while (getchar() != '1') { printf("请输入1确认\n"); }
 		printf("\n请稍等，机器人生成中...");
