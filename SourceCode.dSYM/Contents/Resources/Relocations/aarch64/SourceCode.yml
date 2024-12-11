@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/lordtarn1shed/github/Bombing-Aircraft/SourceCode'
+relocations:     []
+...

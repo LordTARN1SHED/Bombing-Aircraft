@@ -948,11 +948,18 @@ int main() {
 				grid[i][j] = 0;
 			}
 		}
+
+		printf("Game Instructions:\n");
+		printf("The plane's nose is represented by the number 2, and the body is represented by the number 1. A plane consists of one nose and nine body parts (i.e., one 2 and nine 1s).\n");
+		printf("The coordinates for the plane's position are in the format: x (space) y (space) z, where x and y are the horizontal and vertical coordinates (coordinate range is 0-9), and z represents the direction: u for up, d for down, l for left, r for right.\n\n");
+
 		initmap3();
-		printf("Game instructions:\n");
-		printf("The examples in the image above represent four planes, each showing four different plane directions. The plane heads are represented by the number 2, and the bodies by the number 1.\n");
-		printf("Their head coordinates, from top to bottom, left to right, are: 2 0 u, 7 3 d, 0 7 l, 9 7 r.\n");
-		printf("When placing planes, make sure not to place them out of bounds or overlap with other planes.\nAlthough the head coordinates you place the plane within the 0-9 range, the body may extend out of bounds, for example: 1 1 r\n\n");
+
+		printf("In the example above, there are four planes, representing four directions.\n");
+		printf("Their nose coordinates, from top to bottom and left to right, are: 2 0 u, 7 3 d, 0 7 l, 9 7 r.\n");
+		printf("For example: 2 0 u means the plane's nose is at coordinate (2, 0) and its direction is upward.\n");
+		printf("When placing planes, please note: planes cannot go out of bounds, and planes cannot overlap.\n");
+		printf("Even if the plane's nose coordinates are within the range of 0 - 9, the body might exceed the boundary. For example: 1 1 r.\n\n");
 
 		printf("Please choose:\n1. Two-player battle (input '1') \n2. Human vs AI battle (input '2')\n");
 		scanf("%c", &c);
